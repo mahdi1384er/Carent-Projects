@@ -1,31 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="biuld/style.css" />
-  </head>
 
-  <body class="bg-[#F6F7F9]">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="biuld/style.css" />
+  <!-- Apline js link script -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
 
-    
-    <!-- contener -->
-    <div class="w-[98%] m-auto  h-[900px]">
+<body class="bg-[#F6F7F9]">
 
-        <!-- header -->
-        <header class="flex items-center justify-between mt-8  mx-6">
-            <div>
-                <img src="../img/Logo-imgs.svg" alt="Logo" class="w-[108px]">
-            </div>
-            <div>
-                <img src="../img/profiel-imgs.png" alt="profiel" class="w-6">
-            </div>
-        </header>
+  <!-- contener -->
+  <div class="w-[98%] m-auto h-[900px]" x-data="{ open: false , trnstions: 'transition duration-700 ease-in-out' }">
 
+    <!-- header -->
+    <header class="flex items-center justify-between mt-8 mx-6">
+
+      <div>
+        <img src="../img/Logo-imgs.svg" alt="Logo" class="w-[108px]" />
+      </div>
+
+      <div @click="open = ! open" class="hover:cursor-pointer">
+        <div>
+          <img src="../img/Imageprofile.svg" alt="profiel" class="w-7" />
+        </div>
+      </div>
+
+    </header>
+
+    <!-- profile -->
+    <div x-show="open" class="flex flex-col w-[220px] h-[240px] border border-[#c3d4e9]  shadow-lg rounded-2xl bg-[#F6F7F9]  hover:cursor-pointer relative top-3 left-0 float-right text-black">
+      <div  class="flex items-center justify-evenly h-[50px] ">
+        <div>
+          <img src="../img/Imageprofile.svg" alt="profiel" class="w-[225px] h-[30px]">
+        </div>
+        <div class="flex w-[135px] h-[40px] mr-8">
+          <div>
+            <p class="font-bold">Mhadi bahrami</p>
+            <p class="opacity-40 text-[12px] hover:cursor-pointer font-bold">mahdyamy@gmial.com</p>
+          </div>
+          <div>
+            <span class="relative flex h-2 w-2 mt-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3563e9] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-[#3563e9]"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
+          </svg>
+        </div>
+        <div>
+          <p>alert car</p>
+        </div>
+      </div>
     </div>
 
 
-  </body>
+
+    <!-- sections -->
+    <section class="w-[86%] m-auto mt-8">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <div class="absolute">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+              stroke="currentColor" class="w-6 h-6 relative left-[8px]">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </div>
+          <div>
+            <input type="text" placeholder="Search something here"
+              class="p-2 h-[40px] w-[208px] rounded-[10px] pl-[36px] font-[500px] text-[#596780] bg-[#F6F7F9] border border-[#c3d4e9] text-[15px]  outline-none" />
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center bg-[#F6F7F9]  border border-[#c3d4e9] rounded-[10px] w-11 h-[40px] hover:cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"
+            class="w-[57px] h-[25px]">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+
+
+  </div>
+
+
+</body>
 </html>
