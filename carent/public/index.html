@@ -14,19 +14,80 @@
 
 <body class="bg-[#F6F7F9]">
   <!-- contener -->
-  <div class="w-[98%] m-auto h-[900px]" x-data="{ open: false , trnstions: 'transition duration-700 ease-in-out' }">
+  <div class="w-[100%]  m-auto h-[900px]" x-data="{ open: false , trnstions: 'transition duration-700 ease-in-out' }">
+
     <!-- header -->
-    <header class="flex items-center justify-between mt-8 mx-6">
-      <div>
-        <img src="../img/Logo-imgs.svg" alt="Logo" class="w-[108px]" />
+    <header
+      class="flex items-center justify-between h-[40px]  sm:bg-white max-sm:mt-8 sm:h-[82px] max-sm:mx-6   sm:py-0  sm:px-7 ">
+      <div class="flex items-center">
+        <div>
+          <img src="../img/Logo-imgs.svg" alt="Logo" class="w-[108px]" />
+        </div>
+        <div class="max-sm:hidden block ml-[40px]">
+          <div class="flex items-center">
+            <div class="absolute">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                stroke="currentColor" class="w-6 h-6 relative left-[8px]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
+              </svg>
+            </div>
+            <div class="absolute sm:hidden md:block">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                stroke="currentColor" class="w-6 h-6 relative -right-[351px]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+              </svg>
+            </div>
+            <div>
+              <input type="text" placeholder="Search something here"
+                class="p-2 h-[40px] md:w-[387px] sm:w-[227px] rounded-[70px] pl-[36px] font-[500px] text-[#596780] bg-[#F6F7F9] border border-[#c3d4e9] text-[15px] outline-none md:bg-white 2xl:ml-5">
+            </div>
+          </div>
+        </div>
       </div>
 
       <div @click="open = ! open" class="hover:cursor-pointer">
-        <div>
-          <img src="../img/Imageprofile.svg" alt="profiel" class="w-7" />
+        <div class="flex">
+          <div class="flex items-center w-[119px] justify-between  mr-4 max-sm:hidden md:flex">
+
+            <div class="border border-[#c3d4e9] rounded-full p-[3px] hover:cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                stroke="currentColor" class="w-5 h-5 text-[#596780]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </div>
+
+            <span class="w-[4px] h-[4px] p-[4px] rounded-full bg-[#FF4423] relative left-[34px] bottom-[12px]">
+            </span>
+            <div class="border border-[#c3d4e9] rounded-full p-[3px] hover:cursor-pointer mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                stroke="currentColor" class="w-5 h-5 text-[#596780]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+              </svg>
+
+            </div>
+
+            <div class="border border-[#c3d4e9] rounded-full p-[3px] hover:cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                stroke="currentColor" class="w-5 h-5 text-[#596780]">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+
+          </div>
+          <div>
+            <div>
+              <img src="../img/Imageprofile.svg" alt="profiel" class="w-7 md:w-9" />
+            </div>
+          </div>
         </div>
       </div>
-      </header>
+    </header>
 
     <!-- profile -->
     <div x-show="open"
@@ -36,6 +97,7 @@
         <div>
           <img src="../img/Imageprofile.svg" alt="profiel" class="w-[225px] h-[30px]" />
         </div>
+
         <div class="flex w-[135px] h-[40px] mr-8">
           <div>
             <p class="font-bold">Mhadi bahrami</p>
@@ -117,7 +179,7 @@
     </div>
 
     <!-- input profile header -->
-    <section class="w-[86%] m-auto mt-8">
+    <section class="w-[86%] m-auto mt-8 sm:hidden">
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <div class="absolute">
@@ -144,39 +206,68 @@
     </section>
 
     <!-- cart items  -->
-    <section class="bg-[#54a6ff] h-[258px] mt-10 w-[86%] m-auto rounded-lg">
-      <div class="flex flex-col justify-between h-[258px] p-4 text-white">
-        <div>
+    <section class="flex max-sm:w-[90%] sm:w-full m-auto">
+      <div class="bg-[#54a6ff] h-[258px] mt-10 w-[86%] sm:w-[44%] m-auto rounded-lg sm:h-[320px]">
+        <div class="flex flex-col justify-between h-[258px]  sm:h-[314px] p-4 text-white">
           <div>
-            <p class="text-[18px] font-bold">
-              The Best Platform for Car Rental
-            </p>
+            <div>
+              <p class="text-[18px] font-bold">
+                The Best Platform for Car Rental
+              </p>
+            </div>
+            <div class="mt-3">
+              <p class="font-medium text-[13px] w-[95%]">
+                Ease of doing a car rental safely and reliably. Of course at a
+                low price.
+              </p>
+            </div>
           </div>
-          <div class="mt-3">
-            <p class="font-medium text-[13px] w-[95%]">
-              Ease of doing a car rental safely and reliably. Of course at a
-              low price.
-            </p>
+          <div>
+            <button href="#"
+              class="bg-[#3563e9] px-5 py-2 rounded-[4px] text-[13px] hover:bg-[#2b50bd] transition">Rental
+              Car</button>
+          </div>
+          <div>
+            <img src="../img/image 7.svg" alt="car-1" class="m-auto max-sm:w-[190px]" />
           </div>
         </div>
-        <div>
-          <button href="#" class="bg-[#3563e9] px-5 py-2 rounded-[4px] text-[13px] hover:bg-[#2b50bd] transition">Rental
-            Car</button>
-        </div>
-        <div>
-          <img src="../img/Car1.png" alt="car-1" class="" />
+      </div>
+
+      <div class="bg-[#3563E9] h-[258px] mt-10 w-[86%] sm:w-[44%] m-auto rounded-lg sm:h-[310px] max-sm:hidden">
+        <div class="flex flex-col justify-between h-[258px] sm:h-[314px] p-4 text-white">
+          <div>
+            <div>
+              <p class="text-[18px] font-bold">
+                The Best Platform for Car Rental
+              </p>
+            </div>
+            <div class="mt-3">
+              <p class="font-medium text-[13px] w-[95%]">
+                Ease of doing a car rental safely and reliably. Of course at a
+                low price.
+              </p>
+            </div>
+          </div>
+          <div>
+            <button href="#"
+              class="bg-[#54a6ff] px-5 py-2 rounded-[4px] text-[13px] hover:bg-[#4182c7] transition">Rental
+              Car</button>
+          </div>
+          <div>
+            <img src="../img/image 8.png" alt="car-1" class="m-auto max-sm:w-[190px] " />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- filter websites car -->
-    <div>
+    <div class="sm:flex sm:items-center sm:w-[99%] sm:m-auto">
       <!-- filter -->
-      <div class="bg-[#fff] h-[120px] mt-[36px] w-[86%] m-auto rounded-lg p-4 -mb-[7px]">
+      <div class="bg-[#fff] h-[120px] mt-[36px] w-[86%] sm:w-[40%] m-auto rounded-lg p-4 -mb-[7px]">
         <div class="flex">
           <div>
             <span class="relative flex h-2 w-2 mt-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3563e9] opacity-75"></span>
+              <span class="absolute inline-flex h-full w-full rounded-full bg-[#3563e9] opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-[#3563e9]"></span>
             </span>
           </div>
@@ -242,7 +333,7 @@
       </div>
 
       <!-- btns filter -->
-      <div class="flex justify-center">
+      <div class="flex justify-center sm:m-auto sm:mt-[72px]">
         <button class="bg-[#3563e9] w-[60px] h-[60px] rounded-[10px] flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-6 h-6 text-white">
@@ -253,11 +344,11 @@
       </div>
 
       <!-- filter -->
-      <div class="bg-[#fff] h-[120px] -mt-[11px] w-[86%] m-auto rounded-lg p-4">
+      <div class="bg-[#fff] h-[120px] max-sm:-mt-[11px] sm:mt-[45px] w-[86%] sm:w-[40%] m-auto rounded-lg p-4">
         <div class="flex">
           <div>
             <span class="relative flex h-2 w-2 mt-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3563e9] opacity-75"></span>
+              <span class="absolute inline-flex h-full w-full rounded-full bg-[#3563e9] opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-[#3563e9]"></span>
             </span>
           </div>
@@ -324,7 +415,7 @@
     </div>
 
     <!-- products car slider -->
-    <section class="w-[86%] m-auto mt-8">
+    <section class="w-[86%] m-auto mt-8 sm:w-[94%]">
       <div class="flex justify-between">
         <div>
           <p class="text-[#90A3BF] font-semibold">Popular Car</p>
@@ -337,12 +428,11 @@
       </div>
       <div class="container mx-auto">
         <div class="splide hover:cursor-pointer">
-          <div class="splide__track overflow-auto overflow-x-hidden">
-            <div class="splide__list gap-x-4 flex">
-              <div class="splide__arrows"></div>
+          <div class="splide__track overflow-auto overflow-x-hidden sm:relative sm:right-[68px]">
+            <div class="splide__list gap-x-4 flex md:ml-[567px] sm:relative left-[114px]">
               <div class="w-full splide__slide lg:max-w-lg">
                 <div class="flex space-y-2">
-                  <div class="w-[240px] h-[286px] rounded-[10px] bg-white p-2 mt-7">
+                  <div class="w-[240px] md:w-[300px]  rounded-[10px] bg-white p-2 mt-7">
                     <div class="flex items-center justify-between">
                       <div>
                         <div>
@@ -412,7 +502,8 @@
                         </p>
                       </div>
                       <div>
-                        <button class="w-[100px] h-[36px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                        <button
+                          class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
                           Rental Now
                         </button>
                       </div>
@@ -420,6 +511,99 @@
                   </div>
                 </div>
               </div>
+              <div class="w-full splide__slide lg:max-w-lg">
+                <div class="flex space-y-2">
+                  <div class="w-[240px]  md:w-[300px] rounded-[10px] bg-white p-2 mt-7">
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <div>
+                          <p class="font-semibold text-[16px]">Koenigsegg</p>
+                        </div>
+                        <div>
+                          <p class="text-[13px] font-light text-[#90A3BF]">
+                            Sport
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <img src="../img/hart.svg" alt="hart" class="hover:cursor-pointer" />
+                        </div>
+                        <div class="text-white">.</div>
+                      </div>
+                    </div>
+                    <div class="bg-gradient-to-t from-slate-100">
+                      <img src="../img/Car2.png" alt="Car2" class="items-center m-auto mt-6" />
+                    </div>
+                    <div class="mt-8 flex items-center justify-around">
+                      <div class="flex items-center justify-between w-[40px] hover:cursor-pointer">
+                        <div>
+                          <img src="../img/bock.svg" alt="bock" />
+                        </div>
+                        <div>
+                          <p class="text-[#90A3BF] text-[12px] font-medium">
+                            90L
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                            stroke="currentColor" class="w-4 h-4 text-[#90A3BF] mr-[5px]">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="text-[#90A3BF] text-[12px] font-medium">
+                            Manual
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                            stroke="currentColor" class="w-4 h-4 text-[#90A3BF]">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p class="text-[#90A3BF] text-[12px] font-medium">
+                            People
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between p-2 mt-7">
+                      <div>
+                        <p>
+                          <span class="font-bold">$99.00/</span>
+                          <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
+                        </p>
+                      </div>
+                      <div>
+                        <button
+                          class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                          Rental Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="splide__arrows splide__arrows--ltr hidden"><button class="splide__arrow splide__arrow--prev"
+                  type="button" aria-label="Go to last slide" aria-controls="splide01-track"><svg
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" focusable="false">
+                    <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z">
+                    </path>
+                  </svg></button><button class="splide__arrow splide__arrow--next" type="button" aria-label="Next slide"
+                  aria-controls="splide01-track"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40"
+                    height="40" focusable="false">
+                    <path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z">
+                    </path>
+                  </svg></button></div>
             </div>
           </div>
         </div>
@@ -427,16 +611,16 @@
     </section>
 
     <!-- prodcuts data car -->
-    <section class="w-[86%] m-auto mt-8">
+    <section class="w-[86%] m-auto mt-8 sm:w-[94%]">
       <!-- titel products data car -->
       <div>
         <p class="text-[#90A3BF] font-semibold">Recomendation Car</p>
       </div>
-      
+
       <!-- products data items car -->
-      <div>
+      <div class="sm:grid md:grid-cols-4 sm:gap-4 max-md:grid-cols-3">
         <div>
-          <div class=" h-[250px] rounded-[10px] bg-white p-2 mt-7">
+          <div class=" sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
             <div class="flex items-center justify-between">
               <div>
                 <div>
@@ -448,19 +632,21 @@
               </div>
               <div>
                 <div class="hover:cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1" stroke="currentColor" class="w-5 h-5 text-red-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                    stroke="currentColor" class="w-5 h-5 text-red-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                   </svg>
                 </div>
                 <div class="text-white">.</div>
               </div>
             </div>
-            <div class="flex justify-around">
+            <div class="flex justify-around sm:flex-col sm:h-[181px]">
               <div class="bg-gradient-to-t from-slate-100">
                 <img src="../img/Car2.png" alt="Car2" class="items-center m-auto mt-6" />
               </div>
-              <div class="mt-8 flex flex-col h-[80px] items-center justify-between">
-                <div class="flex items-center justify-between w-[40px] hover:cursor-pointer">
+              <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
+                <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
                   <div>
                     <img src="../img/bock.svg" alt="bock" />
                   </div>
@@ -496,23 +682,23 @@
             </div>
             <div class="flex items-center justify-between p-2 mt-7">
               <div class="flex">
-                 <div class="flex flex-col">
+                <div class="flex flex-col">
                   <span class="font-bold">$99.00/</span>
                   <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
-                 </div>
+                </div>
                 <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
               </div>
               <div>
-                <button class="w-[100px] h-[36px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                <button
+                  class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
                   Rental Now
                 </button>
               </div>
             </div>
           </div>
         </div>
-  
         <div>
-          <div class=" h-[250px] rounded-[10px] bg-white p-2 mt-7">
+          <div class=" sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
             <div class="flex items-center justify-between">
               <div>
                 <div>
@@ -524,95 +710,21 @@
               </div>
               <div>
                 <div class="hover:cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1" stroke="currentColor" class="w-5 h-5 text-red-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                    stroke="currentColor" class="w-5 h-5 text-red-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                   </svg>
                 </div>
                 <div class="text-white">.</div>
               </div>
             </div>
-            <div class="flex justify-around">
-              <div class="bg-gradient-to-t from-slate-100">
-                <img src="../img/Car6.png" alt="Car2" class="items-center m-auto mt-6" />
-              </div>
-              <div class="mt-8 flex flex-col h-[80px] items-center justify-between">
-                <div class="flex items-center justify-between w-[40px] hover:cursor-pointer">
-                  <div>
-                    <img src="../img/bock.svg" alt="bock" />
-                  </div>
-                  <div>
-                    <p class="text-[#90A3BF] text-[12px] font-medium">90L</p>
-                  </div>
-                </div>
-                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
-                  <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
-                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF] mr-[5px]">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="text-[#90A3BF] text-[12px] font-medium">Manual</p>
-                  </div>
-                </div>
-                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
-                  <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
-                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF]">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p class="text-[#90A3BF] text-[12px] font-medium">People</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between p-2 mt-7">
-              <div class="flex">
-                 <div class="flex flex-col">
-                  <span class="font-bold">$99.00/</span>
-                  <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
-                 </div>
-                <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
-              </div>
-              <div>
-                <button class="w-[100px] h-[36px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
-                  Rental Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div>
-          <div class=" h-[250px] rounded-[10px] bg-white p-2 mt-7">
-            <div class="flex items-center justify-between">
-              <div>
-                <div>
-                  <p class="font-semibold text-[16px]">Koenigsegg</p>
-                </div>
-                <div>
-                  <p class="text-[13px] font-light text-[#90A3BF]">Sport</p>
-                </div>
-              </div>
-              <div>
-                <div class="hover:cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1" stroke="currentColor" class="w-5 h-5 text-red-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                  </svg>
-                </div>
-                <div class="text-white">.</div>
-              </div>
-            </div>
-            <div class="flex justify-around">
+            <div class="flex justify-around sm:flex-col sm:h-[181px]">
               <div class="bg-gradient-to-t from-slate-100">
                 <img src="../img/Car5.png" alt="Car2" class="items-center m-auto mt-6" />
               </div>
-              <div class="mt-8 flex flex-col h-[80px] items-center justify-between">
-                <div class="flex items-center justify-between w-[40px] hover:cursor-pointer">
+              <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
+                <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
                   <div>
                     <img src="../img/bock.svg" alt="bock" />
                   </div>
@@ -648,23 +760,23 @@
             </div>
             <div class="flex items-center justify-between p-2 mt-7">
               <div class="flex">
-                 <div class="flex flex-col">
+                <div class="flex flex-col">
                   <span class="font-bold">$99.00/</span>
                   <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
-                 </div>
+                </div>
                 <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
               </div>
               <div>
-                <button class="w-[100px] h-[36px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                <button
+                  class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
                   Rental Now
                 </button>
               </div>
             </div>
           </div>
         </div>
-  
         <div>
-          <div class="h-[250px] rounded-[10px] bg-white p-2 mt-7">
+          <div class="sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
             <div class="flex items-center justify-between">
               <div>
                 <div>
@@ -676,19 +788,21 @@
               </div>
               <div>
                 <div class="hover:cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1" stroke="currentColor" class="w-5 h-5 text-red-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                    stroke="currentColor" class="w-5 h-5 text-red-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                   </svg>
                 </div>
                 <div class="text-white">.</div>
               </div>
             </div>
-            <div class="flex justify-around">
+            <div class="flex justify-around sm:flex-col sm:h-[181px]">
               <div class="bg-gradient-to-t from-slate-100">
                 <img src="../img/Car1.png" alt="Car2" class="items-center m-auto mt-6" />
               </div>
-              <div class="mt-8 flex flex-col h-[80px] items-center justify-between">
-                <div class="flex items-center justify-between w-[40px] hover:cursor-pointer">
+              <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
+                <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
                   <div>
                     <img src="../img/bock.svg" alt="bock" />
                   </div>
@@ -724,23 +838,23 @@
             </div>
             <div class="flex items-center justify-between p-2 mt-7">
               <div class="flex">
-                 <div class="flex flex-col">
+                <div class="flex flex-col">
                   <span class="font-bold">$99.00/</span>
                   <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
-                 </div>
+                </div>
                 <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
               </div>
               <div>
-                <button class="w-[100px] h-[36px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                <button
+                  class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
                   Rental Now
                 </button>
               </div>
             </div>
           </div>
         </div>
-  
-          <div>
-          <div class=" h-[250px] rounded-[10px] bg-white p-2 mt-7">
+        <div>
+          <div class="sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
             <div class="flex items-center justify-between">
               <div>
                 <div>
@@ -752,19 +866,21 @@
               </div>
               <div>
                 <div class="hover:cursor-pointer">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1" stroke="currentColor" class="w-5 h-5 text-red-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                    stroke="currentColor" class="w-5 h-5 text-red-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                   </svg>
                 </div>
                 <div class="text-white">.</div>
               </div>
             </div>
-            <div class="flex justify-around">
+            <div class="flex justify-around sm:flex-col sm:h-[181px]">
               <div class="bg-gradient-to-t from-slate-100">
-                <img src="../img/Car3.png" alt="Car2" class="items-center m-auto mt-6" />
+                <img src="../img/Car1.png" alt="Car2" class="items-center m-auto mt-6" />
               </div>
-              <div class="mt-8 flex flex-col h-[80px] items-center justify-between">
-                <div class="flex items-center justify-between w-[40px] hover:cursor-pointer">
+              <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
+                <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
                   <div>
                     <img src="../img/bock.svg" alt="bock" />
                   </div>
@@ -800,14 +916,327 @@
             </div>
             <div class="flex items-center justify-between p-2 mt-7">
               <div class="flex">
-                 <div class="flex flex-col">
+                <div class="flex flex-col">
                   <span class="font-bold">$99.00/</span>
                   <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
-                 </div>
+                </div>
                 <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
               </div>
               <div>
-                <button class="w-[100px] h-[36px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                <button
+                  class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                  Rental Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
+            <div class="flex items-center justify-between">
+              <div>
+                <div>
+                  <p class="font-semibold text-[16px]">Koenigsegg</p>
+                </div>
+                <div>
+                  <p class="text-[13px] font-light text-[#90A3BF]">Sport</p>
+                </div>
+              </div>
+              <div>
+                <div class="hover:cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                    stroke="currentColor" class="w-5 h-5 text-red-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                </div>
+                <div class="text-white">.</div>
+              </div>
+            </div>
+            <div class="flex justify-around sm:flex-col sm:h-[181px]">
+              <div class="bg-gradient-to-t from-slate-100">
+                <img src="../img/Car1.png" alt="Car2" class="items-center m-auto mt-6" />
+              </div>
+              <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
+                <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
+                  <div>
+                    <img src="../img/bock.svg" alt="bock" />
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">90L</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF] mr-[5px]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">Manual</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">People</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between p-2 mt-7">
+              <div class="flex">
+                <div class="flex flex-col">
+                  <span class="font-bold">$99.00/</span>
+                  <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
+                </div>
+                <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
+              </div>
+              <div>
+                <button
+                  class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                  Rental Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
+            <div class="flex items-center justify-between">
+              <div>
+                <div>
+                  <p class="font-semibold text-[16px]">Koenigsegg</p>
+                </div>
+                <div>
+                  <p class="text-[13px] font-light text-[#90A3BF]">Sport</p>
+                </div>
+              </div>
+              <div>
+                <div class="hover:cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                    stroke="currentColor" class="w-5 h-5 text-red-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                </div>
+                <div class="text-white">.</div>
+              </div>
+            </div>
+            <div class="flex justify-around sm:flex-col sm:h-[181px]">
+              <div class="bg-gradient-to-t from-slate-100">
+                <img src="../img/Car1.png" alt="Car2" class="items-center m-auto mt-6" />
+              </div>
+              <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
+                <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
+                  <div>
+                    <img src="../img/bock.svg" alt="bock" />
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">90L</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF] mr-[5px]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">Manual</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">People</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between p-2 mt-7">
+              <div class="flex">
+                <div class="flex flex-col">
+                  <span class="font-bold">$99.00/</span>
+                  <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
+                </div>
+                <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
+              </div>
+              <div>
+                <button
+                  class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                  Rental Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
+            <div class="flex items-center justify-between">
+              <div>
+                <div>
+                  <p class="font-semibold text-[16px]">Koenigsegg</p>
+                </div>
+                <div>
+                  <p class="text-[13px] font-light text-[#90A3BF]">Sport</p>
+                </div>
+              </div>
+              <div>
+                <div class="hover:cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                    stroke="currentColor" class="w-5 h-5 text-red-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                </div>
+                <div class="text-white">.</div>
+              </div>
+            </div>
+            <div class="flex justify-around sm:flex-col sm:h-[181px]">
+              <div class="bg-gradient-to-t from-slate-100">
+                <img src="../img/Car1.png" alt="Car2" class="items-center m-auto mt-6" />
+              </div>
+              <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
+                <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
+                  <div>
+                    <img src="../img/bock.svg" alt="bock" />
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">90L</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF] mr-[5px]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">Manual</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">People</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between p-2 mt-7">
+              <div class="flex">
+                <div class="flex flex-col">
+                  <span class="font-bold">$99.00/</span>
+                  <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
+                </div>
+                <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
+              </div>
+              <div>
+                <button
+                  class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                  Rental Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
+            <div class="flex items-center justify-between">
+              <div>
+                <div>
+                  <p class="font-semibold text-[16px]">Koenigsegg</p>
+                </div>
+                <div>
+                  <p class="text-[13px] font-light text-[#90A3BF]">Sport</p>
+                </div>
+              </div>
+              <div>
+                <div class="hover:cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
+                    stroke="currentColor" class="w-5 h-5 text-red-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                </div>
+                <div class="text-white">.</div>
+              </div>
+            </div>
+            <div class="flex justify-around sm:flex-col sm:h-[181px]">
+              <div class="bg-gradient-to-t from-slate-100">
+                <img src="../img/Car1.png" alt="Car2" class="items-center m-auto mt-6" />
+              </div>
+              <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
+                <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
+                  <div>
+                    <img src="../img/bock.svg" alt="bock" />
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">90L</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF] mr-[5px]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">Manual</p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                      stroke="currentColor" class="w-4 h-4 text-[#90A3BF]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="text-[#90A3BF] text-[12px] font-medium">People</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-between p-2 mt-7">
+              <div class="flex">
+                <div class="flex flex-col">
+                  <span class="font-bold">$99.00/</span>
+                  <span class="text-[12px] text-[#90A3BF] font-medium line-through">$80.00</span>
+                </div>
+                <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
+              </div>
+              <div>
+                <button
+                  class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
                   Rental Now
                 </button>
               </div>
@@ -819,31 +1248,117 @@
       <!-- btn car show all  -->
       <div class="w-[86%] mt-12 m-auto flex items-center justify-between">
         <div class="m-auto">
-          <button class="bg-[#3563E9] w-[120px] h-[36px] text-[14px] rounded-[4px] text-white hover:bg-[#2b50bd] transition">Show More Car</button>
+          <button
+            class="bg-[#3563E9] w-[120px] h-[36px] text-[14px] rounded-[4px] text-white hover:bg-[#2b50bd] transition">Show
+            More Car</button>
         </div>
         <div>
-          <p class="text-[#90A3BF] font-bold text-[14px]">36px</p>
+          <p class="text-[#90A3BF] font-bold text-[14px]">120 Car</p>
         </div>
       </div>
     </section>
 
 
     <!-- footer websites -->
-    <footer>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <footer class="w-[86%] m-auto mt-[160px] pb-3 sm:w-[94%] ">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <div>
+          <div>
+            <p class="text-[24px] font-bold text-[#3563E9] hover:cursor-pointer">MORENT</p>
+          </div>
+          <div class="w-[216px] h-[48px] mt-4"><span class="text-[#90A3BF] font-medium text-[12px]">Our vision is to
+              provide convenience and help increase your sales business.</span></div>
+        </div>
+        <div class="mt-12 flex flex-wrap justify-between md:w-[50%]">
+          <div>
+            <div>
+              <p class="text-[20px] font-semibold mb-4">About</p>
+            </div>
+            <div>
+              <ul>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">How
+                    it works</a></li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Featured</a>
+                </li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Partnership</a>
+                </li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Bussiness
+                    Relation</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p class="text-[20px] font-semibold mb-4">Socials</p>
+            </div>
+            <div>
+              <ul>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Discord</a>
+                </li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Instagram</a>
+                </li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Twitter</a>
+                </li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Facebook</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="max-sm:mt-12">
+            <div>
+              <p class="text-[20px] font-semibold mb-4">Community</p>
+            </div>
+            <div>
+              <ul>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Events</a>
+                </li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Blog</a>
+                </li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Podcast</a>
+                </li>
+                <li class="mt-3"><a href="#"
+                    class="text-[16px] font-medium text-[#90A3BF] transition  hover:transition-all hover:text-[#b3c2d8] duration-500">Invite
+                    a friend</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-between max-sm:flex-col">
+        <div class="mt-12">
+          <div class="flex justify-between">
+            <div>
+              <p class="text-[12px] font-semibold">Privacy & Policy</p>
+            </div>
+            <div>
+              <p class="text-[12px] font-semibold">Terms & Condition</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <p class="text-[12px] font-semibold">©2022 MORENT. All rights reserved</p>
+        </div>
       </div>
     </footer>
 
-    <div class="h-[500px]"></div>
   </div>
 
-  <!-- link scripts slider  -->
+  <!-- link splide slider  -->
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.2/dist/js/splide.min.js"></script>
 
+  <!-- slider products data car js -->
   <script>
     const splide = new Splide(".splide", {
       type: "loop",
