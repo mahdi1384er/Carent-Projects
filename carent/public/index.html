@@ -18,7 +18,7 @@
 
     <!-- header -->
     <header
-      class="flex items-center justify-between h-[40px]  sm:bg-white max-sm:mt-8 sm:h-[82px] max-sm:mx-6   sm:py-0  sm:px-7 ">
+      class="flex items-center justify-between h-[40px]  sm:bg-white max-sm:mt-8 sm:h-[82px] max-sm:mx-6   sm:py-0  sm:px-7">
       <div class="flex items-center">
         <div>
           <img src="../img/Logo-imgs.svg" alt="Logo" class="w-[108px]" />
@@ -46,8 +46,7 @@
           </div>
         </div>
       </div>
-
-      <div @click="open = ! open" class="hover:cursor-pointer">
+      <div @click="open = ! open" class="hover:cursor-pointer flex items-center">
         <div class="flex">
           <div class="flex items-center w-[119px] justify-between  mr-4 max-sm:hidden md:flex">
 
@@ -86,97 +85,96 @@
             </div>
           </div>
         </div>
+        <!-- profile -->
+        <div x-show="open"
+        class="flex flex-col w-[220px] h-[250px] border border-[#c3d4e9] shadow-lg rounded-md bg-[#F6F7F9] hover:cursor-pointer text-black fixed top-[74px] right-[33px]">
+        <!-- titel profile -->
+        <div class="flex items-center justify-evenly h-[50px]">
+          <div>
+            <img src="../img/Imageprofile.svg" alt="profiel" class="w-[225px] h-[30px]" />
+          </div>
+  
+          <div class="flex w-[135px] h-[40px] mr-8">
+            <div>
+              <p class="font-bold">Mhadi bahrami</p>
+              <p class="opacity-40 text-[12px] hover:cursor-pointer font-bold">
+                mahdyamy@gmial.com
+              </p>
+            </div>
+            <div>
+              <span class="relative flex h-2 w-2 mt-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3563e9] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-[#3563e9]"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Property Profile -->
+        <div class="mt-2">
+          <div
+            class="w-[84%] flex items-center opacity-60 hover:cursor-pointer hover:bg-[#ebeef3] hover:opacity-100 p-[9px] ml-3">
+            <div class="mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold">alert car</p>
+            </div>
+          </div>
+  
+          <div
+            class="w-[84%] flex items-center opacity-60 hover:cursor-pointer hover:bg-[#ebeef3] hover:opacity-100 p-[9px] ml-3">
+            <div class="mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold">stigns</p>
+            </div>
+          </div>
+  
+          <div
+            class="w-[84%] flex items-center opacity-60 hover:cursor-pointer hover:bg-[#ebeef3] hover:opacity-100 p-[9px] ml-3">
+            <div class="mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold">show profile</p>
+            </div>
+          </div>
+  
+          <hr class="border-gray-300 mx-3 my-2" />
+  
+          <div
+            class="w-[84%] flex items-center mt-2 opacity-60 hover:cursor-pointer hover:bg-[#ebeef3] hover:opacity-100 p-[9px] ml-3">
+            <div class="mr-3">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold">sign out</p>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </header>
-
-    <!-- profile -->
-    <div x-show="open"
-      class="flex flex-col w-[220px] h-[250px] border border-[#c3d4e9] shadow-lg rounded-md bg-[#F6F7F9] hover:cursor-pointer float-right text-black absolute left-40 top-20">
-      <!-- titel profile -->
-      <div class="flex items-center justify-evenly h-[50px]">
-        <div>
-          <img src="../img/Imageprofile.svg" alt="profiel" class="w-[225px] h-[30px]" />
-        </div>
-
-        <div class="flex w-[135px] h-[40px] mr-8">
-          <div>
-            <p class="font-bold">Mhadi bahrami</p>
-            <p class="opacity-40 text-[12px] hover:cursor-pointer font-bold">
-              mahdyamy@gmial.com
-            </p>
-          </div>
-          <div>
-            <span class="relative flex h-2 w-2 mt-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3563e9] opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-[#3563e9]"></span>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Property Profile -->
-      <div class="mt-2">
-        <div
-          class="w-[84%] flex items-center opacity-60 hover:cursor-pointer hover:bg-[#ebeef3] hover:opacity-100 p-[9px] ml-3">
-          <div class="mr-3">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
-            </svg>
-          </div>
-          <div>
-            <p class="font-semibold">alert car</p>
-          </div>
-        </div>
-
-        <div
-          class="w-[84%] flex items-center opacity-60 hover:cursor-pointer hover:bg-[#ebeef3] hover:opacity-100 p-[9px] ml-3">
-          <div class="mr-3">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <div>
-            <p class="font-semibold">stigns</p>
-          </div>
-        </div>
-
-        <div
-          class="w-[84%] flex items-center opacity-60 hover:cursor-pointer hover:bg-[#ebeef3] hover:opacity-100 p-[9px] ml-3">
-          <div class="mr-3">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <div>
-            <p class="font-semibold">show profile</p>
-          </div>
-        </div>
-
-        <hr class="border-gray-300 mx-3 my-2" />
-
-        <div
-          class="w-[84%] flex items-center mt-2 opacity-60 hover:cursor-pointer hover:bg-[#ebeef3] hover:opacity-100 p-[9px] ml-3">
-          <div class="mr-3">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-            </svg>
-          </div>
-          <div>
-            <p class="font-semibold">sign out</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- input profile header -->
     <section class="w-[86%] m-auto mt-8 sm:hidden">
@@ -207,8 +205,8 @@
 
     <!-- cart items  -->
     <section class="flex max-sm:w-[90%] sm:w-full m-auto">
-      <div class="bg-[#54a6ff] h-[258px] mt-10 w-[86%] sm:w-[44%] m-auto rounded-lg sm:h-[320px]">
-        <div class="flex flex-col justify-between h-[258px]  sm:h-[314px] p-4 text-white">
+      <div class=" bg-[#54a6ff] h-[258px] mt-10 w-[86%] sm:w-[44%] m-auto rounded-lg sm:h-[320px]">
+        <div class=" flex flex-col justify-between h-[258px]  sm:h-[314px] p-4 text-white">
           <div>
             <div>
               <p class="text-[18px] font-bold">
@@ -277,7 +275,7 @@
         </div>
 
         <div class="mt-[24px] flex justify-between">
-          <div class="hover:cursor-pointer border-r-[1px] border-gray-200 pr-3">
+          <div class="hover:cursor-pointer border-r-[1px">
             <div>
               <p class="font-bold text-[16px]">Locations</p>
             </div>
@@ -287,7 +285,7 @@
                   Semarang
                 </p>
               </div>
-              <div class="mt-[5px]">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
                   stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -295,8 +293,9 @@
               </div>
             </div>
           </div>
+          <div class=" border-r-[1px] border-gray-200"></div>
 
-          <div class="hover:cursor-pointer border-r-[1px] border-gray-200 pr-3">
+          <div class="hover:cursor-pointer">
             <div>
               <p class="font-bold text-[16px]">Date</p>
             </div>
@@ -304,7 +303,7 @@
               <div>
                 <p class="font-[300px] text-[14px] text-[#90A3BF]">26 2022</p>
               </div>
-              <div class="mt-[5px]">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
                   stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -312,6 +311,7 @@
               </div>
             </div>
           </div>
+          <div class=" border-r-[1px] border-gray-200"></div>
 
           <div class="hover:cursor-pointer">
             <div>
@@ -321,7 +321,7 @@
               <div>
                 <p class="font-[300px] text-[14px] text-[#90A3BF]">07.00</p>
               </div>
-              <div class="mt-[5px]">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
                   stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -334,7 +334,7 @@
 
       <!-- btns filter -->
       <div class="flex justify-center sm:m-auto sm:mt-[72px]">
-        <button class="bg-[#3563e9] w-[60px] h-[60px] rounded-[10px] flex items-center justify-center">
+        <button class="bg-[#3563e9] w-[60px] h-[60px] rounded-[10px] flex items-center justify-center shadow-lg">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="w-6 h-6 text-white">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -358,7 +358,7 @@
         </div>
 
         <div class="mt-[24px] flex justify-between">
-          <div class="hover:cursor-pointer border-r-[1px] border-gray-200 pr-3">
+          <div class="hover:cursor-pointer">
             <div>
               <p class="font-bold text-[16px]">Locations</p>
             </div>
@@ -368,7 +368,7 @@
                   Semarang
                 </p>
               </div>
-              <div class="mt-[5px]">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
                   stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -377,7 +377,9 @@
             </div>
           </div>
 
-          <div class="hover:cursor-pointer border-r-[1px] border-gray-200 pr-3">
+          <div class=" border-r-[1px] border-gray-200"></div>
+
+          <div class="hover:cursor-pointer">
             <div>
               <p class="font-bold text-[16px]">Date</p>
             </div>
@@ -385,7 +387,7 @@
               <div>
                 <p class="font-[300px] text-[14px] text-[#90A3BF]">21 2022</p>
               </div>
-              <div class="mt-[5px]">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
                   stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -393,6 +395,7 @@
               </div>
             </div>
           </div>
+          <div class=" border-r-[1px] border-gray-200"></div>
 
           <div class="hover:cursor-pointer">
             <div>
@@ -402,7 +405,7 @@
               <div>
                 <p class="font-[300px] text-[14px] text-[#90A3BF]">01.00</p>
               </div>
-              <div class="mt-[5px]">
+              <div>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
                   stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
@@ -429,7 +432,7 @@
       <div class="container mx-auto">
         <div class="splide hover:cursor-pointer">
           <div class="splide__track overflow-auto overflow-x-hidden sm:relative sm:right-[68px]">
-            <div class="splide__list gap-x-4 flex md:ml-[567px] sm:relative left-[114px]">
+            <div class="splide__list gap-x-4 flex  sm:relative left-[114px]">
               <div class="w-full splide__slide lg:max-w-lg">
                 <div class="flex space-y-2">
                   <div class="w-[240px] md:w-[300px]  rounded-[10px] bg-white p-2 mt-7">
@@ -611,14 +614,14 @@
     </section>
 
     <!-- prodcuts data car -->
-    <section class="w-[86%] m-auto mt-8 sm:w-[94%]">
+    <section class="w-[86%] m-auto max-sm:mt-8 sm:mt-12 sm:w-[94%]">
       <!-- titel products data car -->
       <div>
         <p class="text-[#90A3BF] font-semibold">Recomendation Car</p>
       </div>
 
       <!-- products data items car -->
-      <div class="sm:grid md:grid-cols-4 sm:gap-4 max-md:grid-cols-3">
+      <div class="sm:grid sm:grid-cols-3  lg:grid-cols-4 sm:gap-4 max-sm:grid-cols-3">
         <div>
           <div class=" sm:h-[340px] w-[100%] rounded-[10px] bg-white p-2 mt-7">
             <div class="flex items-center justify-between">
