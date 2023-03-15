@@ -4,5 +4,7 @@
 
 
 @layer components {
-    
+    input{
+        background: none;
+    }
 }
