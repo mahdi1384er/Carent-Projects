@@ -18,24 +18,22 @@ export default class dinamic {
                   </div>
                 </div>
                 <div  x-data='{open: false}'>
-                  <div  class="hover:cursor-pointer">
-                   <div>
-                        <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
-                          stroke="currentColor" class="w-5 h-5 text-red-600">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                          </svg>
+                  <div   class="hover:cursor-pointer h-[20px]">
+                   <div  @click='open = ! open'>
+                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp" class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted"><title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
                    </div>
-                   <div x-show="open" >
-                      <img src="../img/hart.svg" alt="hart" class="hover:cursor-pointer  w-[16px]">
+                   <div x-show="open" @click="open = false" class='h-[6px]'>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                       <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+                      </svg>
                    </div>
+                  
                   </div>
-                  <div class="text-white">.</div>
                 </div>
               </div>
               <div class="flex justify-around sm:flex-col sm:h-[181px]">
                 <div class="bg-gradient-to-t from-slate-100">
-                  <img src="${items.imgs}" alt="Car2" class="items-center m-auto mt-6 w-[201px]" />
+                  <img src="${items.imgs}" alt="Car2" class="items-center m-auto mt-6  w-[180px] h-[70px]" />
                 </div>
                 <div class="mt-8 flex flex-col h-[80px] items-center justify-between sm:flex-row">
                   <div class="flex items-center justify-between w-[56px] sm:w-[41px] hover:cursor-pointer">
@@ -100,15 +98,27 @@ export default class dinamic {
     });
   }
 
-  static axios() {
-    axios
-      .get("http://localhost:3000/posts")
-      .then((yes) => {
-        aryy = yes.data;
-        this.dataCar();
-      })
-      .catch((eror) => {
-        console.log(eror);
-      });
+  static axiost() {
+    function callStoreApi() {
+      const fullUrl = "http://localhost:3000/posts";
+      let response = "";
+
+      return (response = axios
+        .get(fullUrl)
+        .then((response) => {
+          return response.data;
+          // console.log(a);
+        })
+        .catch((eror) => {
+          console.log(eror);
+        }));
+    }
+    return callStoreApi();
+
+}
+
+  static created() {
+    const a = this.axiost();
+    console.log(a);
   }
 }

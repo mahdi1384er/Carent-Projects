@@ -18,7 +18,7 @@
 
     <!-- header -->
     <header
-      class="backdrop-blur-2xl fixed top-0 w-full flex items-center justify-between h-[40px] z-20  max-sm:mt-8 sm:h-[82px] max-sm:mx-6   sm:py-0  sm:px-7">
+      class="container max-w-screen-2xl m-auto backdrop-blur-2xl fixed top-0 right-0 left-0 w-full flex items-center justify-between h-[40px] z-20  max-sm:mt-8 sm:h-[82px] max-sm:mx-6   sm:py-0  sm:px-7">
       <div class="flex items-center">
         <div>
           <img src="../img/Logo-imgs.svg" alt="Logo" class="w-[108px]" />
@@ -73,7 +73,8 @@
               class="flex flex-col w-[387px] h-[290px] border border-[#c3d4e9] shadow-lg rounded-md bg-[#F6F7F9] hover:cursor-pointer text-black fixed top-[74px] right-[161px]">
               <!-- Property Profile -->
               <div class="mt-2">
-                <div class="w-[94%] h-[100px] flex items-center justify-between  hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out hover:shadow-secondary-100/40 ml-3 shadow-sm rounded-sm px-2 py-0">
+                <div
+                  class="w-[94%] h-[100px] flex items-center justify-between  hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out hover:shadow-secondary-100/40 ml-3 shadow-sm rounded-sm px-2 py-0">
 
 
                   <div>
@@ -103,7 +104,7 @@
                       </svg><span class="text-xs mr-1 font-bold"></span><span
                         class="MuiTouchRipple-root muirtl-w0pj6f"></span>
                     </div>
-                    
+
                   </div>
 
 
@@ -225,7 +226,7 @@
     </header>
 
     <!-- main -->
-    <main class="mt-[120px]">
+    <main class="mt-[120px] container max-w-screen-2xl m-auto">
       <!-- input profile header -->
       <section class="w-[86%] m-auto mt-[300px] sm:hidden">
         <div class="flex items-center justify-between">
@@ -502,7 +503,32 @@
                         </div>
                         <div>
                           <div>
-                            <img src="../img/hart.svg" alt="hart" class="hover:cursor-pointer" />
+                            <div x-data='{open: false}'>
+                              <div class="hover:cursor-pointer h-[10px]">
+                                <div>
+
+                                  <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                    class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                    <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                    <path
+                                      d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                    </path>
+                                  </svg>
+                                </div>
+                                <div x-show="open" @click="open = false">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq"
+                                    class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted">
+                                    <title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path
+                                      d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z">
+                                    </path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="text-white">.</div>
+                            </div>
                           </div>
                           <div class="text-white">.</div>
                         </div>
@@ -587,7 +613,26 @@
                         </div>
                         <div>
                           <div>
-                            <img src="../img/hart.svg" alt="hart" class="hover:cursor-pointer" />
+                            <div x-data='{open: false}'>
+                              <div class="hover:cursor-pointer h-[10px]">
+                                <div>
+                                  <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                  role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                  class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                  <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                  <path
+                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                  </path>
+                                </svg>
+                                </div>
+                                <div x-show="open" @click="open = false">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+                                   </svg>
+                                </div>
+                              </div>
+                              <div class="text-white">.</div>
+                            </div>
                           </div>
                           <div class="text-white">.</div>
                         </div>
@@ -672,7 +717,26 @@
                         </div>
                         <div>
                           <div>
-                            <img src="../img/hart.svg" alt="hart" class="hover:cursor-pointer" />
+                            <div x-data='{open: false}'>
+                              <div class="hover:cursor-pointer h-[10px]">
+                                <div>
+                                  <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                  role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                  class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                  <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                  <path
+                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                  </path>
+                                </svg>
+                                </div>
+                                <div x-show="open" @click="open = false">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+                                   </svg>
+                                </div>
+                              </div>
+                              <div class="text-white">.</div>
+                            </div>
                           </div>
                           <div class="text-white">.</div>
                         </div>
@@ -758,7 +822,26 @@
                         </div>
                         <div>
                           <div>
-                            <img src="../img/hart.svg" alt="hart" class="hover:cursor-pointer" />
+                            <div x-data='{open: false}'>
+                              <div class="hover:cursor-pointer h-[10px]">
+                                <div>
+                                  <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                  role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                  class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                  <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                  <path
+                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                  </path>
+                                </svg>
+                                </div>
+                                <div x-show="open" @click="open = false">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+                                   </svg>
+                                </div>
+                              </div>
+                              <div class="text-white">.</div>
+                            </div>
                           </div>
                           <div class="text-white">.</div>
                         </div>
@@ -844,7 +927,26 @@
                         </div>
                         <div>
                           <div>
-                            <img src="../img/hart.svg" alt="hart" class="hover:cursor-pointer" />
+                            <div x-data='{open: false}'>
+                              <div class="hover:cursor-pointer h-[10px]">
+                                <div>
+                                  <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                  role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                  class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                  <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                  <path
+                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                  </path>
+                                </svg>
+                                </div>
+                                <div x-show="open" @click="open = false">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+                                   </svg>
+                                </div>
+                              </div>
+                              <div class="text-white">.</div>
+                            </div>
                           </div>
                           <div class="text-white">.</div>
                         </div>
@@ -953,7 +1055,7 @@
 
 
     <!-- footer websites -->
-    <footer class="w-[86%] m-auto mt-[160px] pb-3 sm:w-[94%] ">
+    <footer class="w-[86%] m-auto mt-[160px] pb-3 sm:w-[94%] container max-w-screen-2xl m-auto">
       <div class="sm:flex sm:items-center sm:justify-between">
         <div>
           <div>
@@ -1054,7 +1156,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/app.js" type="module"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+  
 
 </body>
 
