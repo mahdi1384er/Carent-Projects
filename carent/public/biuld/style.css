@@ -549,6 +549,9 @@ input{
 .top-\[74px\] {
   top: 74px;
 }
+.bottom-\[24px\] {
+  bottom: 24px;
+}
 .z-20 {
   z-index: 20;
 }

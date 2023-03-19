@@ -1,5 +1,8 @@
+import Stroge from "./Stroge.js";
+
 const Car = document.querySelector(".carItems");
 let aryy = [];
+
 
 export default class dinamic {
   static dataCar() {
@@ -18,17 +21,16 @@ export default class dinamic {
                   </div>
                 </div>
                 <div  x-data='{open: false}'>
-                  <div   class="hover:cursor-pointer h-[20px]">
-                   <div  @click='open = ! open'>
-                      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp" class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted"><title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
-                   </div>
-                   <div x-show="open" @click="open = false" class='h-[6px]'>
-                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
-                       <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
-                      </svg>
-                   </div>
-                  
-                  </div>
+                 <div  class="hover:cursor-pointer h-[20px]">
+                 <div  @click='open = ! open'>
+                    <svg data-id='${items.id}' class='hart' xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp" class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted"><title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title><path d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z"></path></svg>
+                 </div>
+                 <div x-show="open" @click="open = false" class='h-[6px]'>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-[24px] crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                     <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
+                    </svg>
+                 </div>
+                </div>
                 </div>
               </div>
               <div class="flex justify-around sm:flex-col sm:h-[181px]">
@@ -98,27 +100,16 @@ export default class dinamic {
     });
   }
 
-  static axiost() {
-    function callStoreApi() {
-      const fullUrl = "http://localhost:3000/posts";
-      let response = "";
-
-      return (response = axios
-        .get(fullUrl)
-        .then((response) => {
-          return response.data;
-          // console.log(a);
-        })
-        .catch((eror) => {
-          console.log(eror);
-        }));
-    }
-    return callStoreApi();
-
-}
-
-  static created() {
-    const a = this.axiost();
-    console.log(a);
+  static axios() {
+    axios
+    .get("http://localhost:3000/posts")
+    .then((yes) => {
+      aryy = yes.data;
+      this.dataCar();
+      Stroge.setdata(aryy);
+    })
+    .catch((eror) => {
+      console.log(eror);
+    });
   }
 }

@@ -1,76 +1,76 @@
 {
   "posts": [
     {
-      "id" : 1,
+      "id": 1,
       "title": "Koenigsegg",
-      "imgs" : "../img/Car (9).png",
-      "priec" : "$22.56",
-      "Discount" : "$20.00",
-     "People" : "5 People",
-      "bock" : "20L"
+      "imgs": "../img/Car (9).png",
+      "priec": "$22.56",
+      "Discount": "$20.00",
+      "People": "5 People",
+      "bock": "20L"
     },
     {
-      "id" : 2,
+      "id": 2,
       "title": "Nissan GT - R",
-      "imgs" : "../img/Car 23.png",
-      "priec" : "$45.16",
-      "Discount" : "",
-     "People" : "8 People",
-      "bock" : "10L"
+      "imgs": "../img/Car 23.png",
+      "priec": "$45.16",
+      "Discount": "",
+      "People": "8 People",
+      "bock": "10L"
     },
     {
-      "id" : 3,
+      "id": 3,
       "title": "Rolls - Royce",
-      "imgs" : "../img/Car 24.png",
-      "priec" : "$76.34",
-      "Discount" : "",
-     "People" : "3 People",
-      "bock" : "70L"
+      "imgs": "../img/Car 24.png",
+      "priec": "$76.34",
+      "Discount": "",
+      "People": "3 People",
+      "bock": "70L"
     },
     {
-      "id" : 4,
+      "id": 4,
       "title": "Nissan GT - R",
-      "imgs" : "../img/Car (9).png",
-      "priec" : "$12.26",
-      "Discount" : "$10.00",
-     "People" : "6 People",
-      "bock" : "20L"
+      "imgs": "../img/Car (9).png",
+      "priec": "$12.26",
+      "Discount": "$10.00",
+      "People": "6 People",
+      "bock": "20L"
     },
     {
-      "id" : 5,
+      "id": 5,
       "title": "All New Rush",
-      "imgs" : "../img/Car (13).png",
-      "priec" : "$87.99",
-      "Discount" : "$45.00",
-     "People" : "5 People",
-      "bock" : "50L"
+      "imgs": "../img/Car (13).png",
+      "priec": "$87.99",
+      "Discount": "$45.00",
+      "People": "5 People",
+      "bock": "50L"
     },
     {
-      "id" : 6,
+      "id": 6,
       "title": "CR  - V",
-      "imgs" : "../img/Car (12).png",
-      "priec" : "$41.22",
-      "Discount" : "",
-     "People" : "6 People",
-      "bock" : "90L"
+      "imgs": "../img/Car (12).png",
+      "priec": "$41.22",
+      "Discount": "",
+      "People": "6 People",
+      "bock": "90L"
     },
     {
-      "id" : 8,
+      "id": 8,
       "title": "All New Terios",
-      "imgs" : "../img/image 8.png",
-      "priec" : "$42.49",
-      "Discount" : "$90.00",
-     "People" : "3 People",
-      "bock" : "30L"
+      "imgs": "../img/image 8.png",
+      "priec": "$42.49",
+      "Discount": "$90.00",
+      "People": "3 People",
+      "bock": "30L"
     },
     {
-      "id" : 9,
+      "id": 9,
       "title": "Nissan GT - R",
-      "imgs" : "../img/Car (12).png",
-      "priec" : "$42.49",
-      "Discount" : "$40.00",
-     "People" : "4 People",
-      "bock" : "60L"
+      "imgs": "../img/Car (12).png",
+      "priec": "$42.49",
+      "Discount": "$40.00",
+      "People": "4 People",
+      "bock": "60L"
     }
   ]
 }

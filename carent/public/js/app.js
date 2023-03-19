@@ -1,11 +1,11 @@
 import dinamic from "./dinamic.js";
-import Stroge from "./Stroge.js";
+import prodcuts from "./prodcutsview.js";
+
 
 // DOMContentLoaded html web
 document.addEventListener("DOMContentLoaded", () => {
-  dinamic.dataCar();
+  const data =  dinamic.axios();
+  dinamic.dataCar(data);
   dinamic.slider();
-  dinamic.axiost();
-  const a = dinamic.created();
-  Stroge.setdata(a);
+  prodcuts.Heartbtn();
 });
