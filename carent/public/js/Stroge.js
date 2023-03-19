@@ -15,4 +15,8 @@ export default class Stroge {
   static setCartValue(heart) {
     localStorage.setItem("heart", JSON.stringify(heart));
   }
+
+  static getHeartImtes() {
+    return JSON.parse(localStorage.getItem('heart')) ? JSON.parse(localStorage.getItem('heart')) : [];
+};
 }
