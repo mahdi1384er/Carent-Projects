@@ -8,5 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   dinamic.dataCar(data);
   dinamic.slider();
   prodcuts.Heartbtn();
-  prodcuts.showProdcut();
+  prodcuts.setupe();
+  prodcuts.PriecItems();
+  prodcuts.setPriec();
 });

@@ -12,13 +12,14 @@
 </head>
 
 <body class="bg-[#F6F7F9]">
+
+
   <!-- contener -->
   <div class="w-[100%]  m-auto h-[900px]"
-    x-data="{ open: false , click: false, trnstions: 'transition duration-700 ease-in-out' }">
+    x-data="{ open: false , click: false, shops: false , trnstions: 'transition duration-700 ease-in-out' }">
 
     <!-- header -->
-    <header
-      class="header container max-w-screen-2xl m-auto backdrop-blur-2xl fixed top-0 right-0 left-0 w-full flex items-center justify-between h-[40px] z-20  max-sm:mt-8 sm:h-[82px] max-sm:mx-6   sm:py-0  sm:px-7">
+    <header class="header container max-w-screen-2xl m-auto backdrop-blur-2xl fixed top-0 right-0 left-0 w-full flex items-center justify-between h-[40px] z-20   sm:h-[82px]  max-sm:p-5 max-sm:pt-[30px]  sm:py-0  sm:px-7">
       <div class="flex items-center">
         <div>
           <img src="../img/Logo-imgs.svg" alt="Logo" class="w-[108px]" />
@@ -70,20 +71,64 @@
             </div>
 
             <div x-show="click"
-              class="flex flex-col w-[387px] h-[290px] border border-[#c3d4e9] shadow-lg rounded-md bg-[#F6F7F9] hover:cursor-pointer text-black fixed top-[74px] right-[161px]">
+              class="scroll flex flex-col w-[387px] h-[419px]  flex-none overflow-y-scroll border border-[#c3d4e9] shadow-lg rounded-md bg-[#F6F7F9] hover:cursor-pointer text-black fixed top-[74px] right-[161px]">
               <!-- Property Profile -->
-              <div class="ContenerCarItem mt-2">
-               
+              <div class="ContenerCarItem  mt-2">
+
               </div>
             </div>
 
-            <div class="border border-[#c3d4e9] rounded-full p-[3px] hover:cursor-pointer">
+            <div @click="shops = !shops" class="border border-[#c3d4e9] rounded-full p-[3px] hover:cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1"
                 stroke="currentColor" class="w-5 h-5 text-[#596780]">
                 <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
               </svg>
+
+            </div>
+            <div x-show="shops"
+              class="scroll flex flex-col w-[387px] h-[500px]  flex-none overflow-y-scroll border border-[#c3d4e9] shadow-lg rounded-md bg-[#F6F7F9] text-black fixed top-[74px] right-[87px]">
+              <!-- Property Profile -->
+              <div>
+                <div class="flex items-center justify-between border-b-2 border-gray-700  mx-3 my-0">
+                 <div>
+                  <p class="m-5 text-[22px] font-bold">order shops</p>
+                 </div>
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.1" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <div class="ContenerCarItem">
+                   <div class="ContenerPriec">
+
+                   </div>
+
+                    <div class="flex  flex-col justify-between m-[14px] relative top-[100px] h-[106px]">
+                     <div class="flex justify-between">
+                      <div>
+                        <div>
+                          <p class="font-bold text-[24px]">total</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-gray-600">(shops online car prodcuts)</p>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="totalPriec font-bold text-[26px]">$ 0</p>
+                      </div>
+                     </div>
+
+                      <div class="mt-[27px]">
+                        <button  flex  flex-col justify-between m-[14px] relative top-[100px] h-[106px] class="bg-blue-600 rounded-md w-full p-2 m-2 text-white hover:cursor-pointer hover:bg-[#2b50bd] transition">onlin shops</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
 
           </div>
@@ -186,11 +231,11 @@
         </div>
       </div>
     </header>
-    
+
     <!-- main -->
     <main class="mt-[120px] container max-w-screen-2xl m-auto">
       <!-- input profile header -->
-      <section class="w-[86%] m-auto mt-[300px] sm:hidden">
+      <section class="w-[86%] m-auto  sm:hidden">
         <div class="flex items-center justify-between">
           <div class="flex items-center">
             <div class="absolute">
@@ -217,7 +262,7 @@
       </section>
 
       <!-- cart items  -->
-      <section class="flex max-sm:w-[90%] sm:w-full m-auto">
+      <section class="header flex max-sm:w-[90%] sm:w-full m-auto">
         <div class=" bg-[#54a6ff] h-[258px] mt-10 w-[86%] sm:w-[44%] m-auto rounded-lg sm:h-[320px]">
           <div class=" flex flex-col justify-between h-[258px]  sm:h-[314px] p-4 text-white">
             <div>
@@ -579,18 +624,23 @@
                               <div class="hover:cursor-pointer h-[10px]">
                                 <div>
                                   <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                  role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
-                                  class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
-                                  <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
-                                  <path
-                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
-                                  </path>
-                                </svg>
+                                    role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                    class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                    <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                    <path
+                                      d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                    </path>
+                                  </svg>
                                 </div>
                                 <div x-show="open" @click="open = false">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
-                                    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
-                                   </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq"
+                                    class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted">
+                                    <title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path
+                                      d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z">
+                                    </path>
+                                  </svg>
                                 </div>
                               </div>
                               <div class="text-white">.</div>
@@ -683,123 +733,23 @@
                               <div class="hover:cursor-pointer h-[10px]">
                                 <div>
                                   <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                  role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
-                                  class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
-                                  <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
-                                  <path
-                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
-                                  </path>
-                                </svg>
+                                    role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                    class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                    <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                    <path
+                                      d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                    </path>
+                                  </svg>
                                 </div>
                                 <div x-show="open" @click="open = false">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
-                                    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
-                                   </svg>
-                                </div>
-                              </div>
-                              <div class="text-white">.</div>
-                            </div>
-                          </div>
-                          <div class="text-white">.</div>
-                        </div>
-                      </div>
-                      <div class="bg-gradient-to-t from-slate-100">
-                        <img src="../img/Car2.png" alt="Car2" class="items-center m-auto mt-6" />
-                      </div>
-                      <div class="mt-8 flex items-center justify-around">
-                        <div class="flex items-center justify-between w-[40px] hover:cursor-pointer">
-                          <div>
-                            <img src="../img/bock.svg" alt="bock" />
-                          </div>
-                          <div>
-                            <p class="text-[#90A3BF] text-[12px] font-medium">
-                              90L
-                            </p>
-                          </div>
-                        </div>
-                        <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
-                          <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
-                              stroke="currentColor" class="w-4 h-4 text-[#90A3BF] mr-[5px]">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
-                            </svg>
-                          </div>
-                          <div>
-                            <p class="text-[#90A3BF] text-[12px] font-medium">
-                              Manual
-                            </p>
-                          </div>
-                        </div>
-                        <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
-                          <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
-                              stroke="currentColor" class="w-4 h-4 text-[#90A3BF]">
-                              <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                            </svg>
-                          </div>
-                          <div>
-                            <p class="text-[#90A3BF] text-[12px] font-medium">
-                              People
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="flex items-center justify-between p-2 mt-7">
-                        <div>
-                          <p>
-                            <span class="font-bold">$99.00/</span>
-                            <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
-                          </p>
-                        </div>
-                        <div>
-                          <button
-                            class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
-                            Rental Now
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide mr-[22px] w-[300px]" aria-label="2 / 5" role="group">
-              <div>
-                <div class="w-full splide__slide lg:max-w-lg">
-                  <div class="flex space-y-2">
-                    <div class="w-[240px]  md:w-[300px] rounded-[10px] bg-white p-2 mt-7">
-                      <div class="flex items-center justify-between">
-                        <div>
-                          <div>
-                            <p class="font-semibold text-[16px]">Koenigsegg</p>
-                          </div>
-                          <div>
-                            <p class="text-[13px] font-light text-[#90A3BF]">
-                              Sport
-                            </p>
-                          </div>
-                        </div>
-                        <div>
-                          <div>
-                            <div x-data='{open: false}'>
-                              <div class="hover:cursor-pointer h-[10px]">
-                                <div>
-                                  <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                  role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
-                                  class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
-                                  <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
-                                  <path
-                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
-                                  </path>
-                                </svg>
-                                </div>
-                                <div x-show="open" @click="open = false">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
-                                    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
-                                   </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq"
+                                    class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted">
+                                    <title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path
+                                      d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z">
+                                    </path>
+                                  </svg>
                                 </div>
                               </div>
                               <div class="text-white">.</div>
@@ -893,18 +843,133 @@
                               <div class="hover:cursor-pointer h-[10px]">
                                 <div>
                                   <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                  role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
-                                  class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
-                                  <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
-                                  <path
-                                    d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
-                                  </path>
-                                </svg>
+                                    role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                    class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                    <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                    <path
+                                      d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                    </path>
+                                  </svg>
                                 </div>
                                 <div x-show="open" @click="open = false">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq" class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted"><title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
-                                    <path d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z"></path>
-                                   </svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq"
+                                    class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted">
+                                    <title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path
+                                      d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z">
+                                    </path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="text-white">.</div>
+                            </div>
+                          </div>
+                          <div class="text-white">.</div>
+                        </div>
+                      </div>
+                      <div class="bg-gradient-to-t from-slate-100">
+                        <img src="../img/Car2.png" alt="Car2" class="items-center m-auto mt-6" />
+                      </div>
+                      <div class="mt-8 flex items-center justify-around">
+                        <div class="flex items-center justify-between w-[40px] hover:cursor-pointer">
+                          <div>
+                            <img src="../img/bock.svg" alt="bock" />
+                          </div>
+                          <div>
+                            <p class="text-[#90A3BF] text-[12px] font-medium">
+                              90L
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                          <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                              stroke="currentColor" class="w-4 h-4 text-[#90A3BF] mr-[5px]">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+                            </svg>
+                          </div>
+                          <div>
+                            <p class="text-[#90A3BF] text-[12px] font-medium">
+                              Manual
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex items-center justify-between w-[58px] hover:cursor-pointer">
+                          <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.2"
+                              stroke="currentColor" class="w-4 h-4 text-[#90A3BF]">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <p class="text-[#90A3BF] text-[12px] font-medium">
+                              People
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-center justify-between p-2 mt-7">
+                        <div>
+                          <p>
+                            <span class="font-bold">$99.00/</span>
+                            <span class="text-[#90A3BF] font-bold text-[15px]">day</span>
+                          </p>
+                        </div>
+                        <div>
+                          <button
+                            class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                            Rental Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide mr-[22px] w-[300px]" aria-label="2 / 5" role="group">
+              <div>
+                <div class="w-full splide__slide lg:max-w-lg">
+                  <div class="flex space-y-2">
+                    <div class="w-[240px]  md:w-[300px] rounded-[10px] bg-white p-2 mt-7">
+                      <div class="flex items-center justify-between">
+                        <div>
+                          <div>
+                            <p class="font-semibold text-[16px]">Koenigsegg</p>
+                          </div>
+                          <div>
+                            <p class="text-[13px] font-light text-[#90A3BF]">
+                              Sport
+                            </p>
+                          </div>
+                        </div>
+                        <div>
+                          <div>
+                            <div x-data='{open: false}'>
+                              <div class="hover:cursor-pointer h-[10px]">
+                                <div>
+                                  <svg @click='open = ! open' xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    role="img" aria-labelledby="aaogwmrptgtl1vht5o3zh4d92kbjlyrp"
+                                    class="w-5 h-5 text-red-600 crayons-icon reaction-icon not-reacted">
+                                    <title id="aaogwmrptgtl1vht5o3zh4d92kbjlyrp">Like comment: </title>
+                                    <path
+                                      d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                                    </path>
+                                  </svg>
+                                </div>
+                                <div x-show="open" @click="open = false">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    role="img" aria-labelledby="ae27pasxndznuguvytx893u1mrek6qnq"
+                                    class="crayons-icon relative bottom-5 crayons-icon reaction-icon--like reaction-icon reacted">
+                                    <title id="ae27pasxndznuguvytx893u1mrek6qnq">Like comment: </title>
+                                    <path
+                                      d="M5.116 12.595a4.875 4.875 0 015.56-7.68h-.002L7.493 8.098l1.06 1.061 3.181-3.182a4.875 4.875 0 016.895 6.894L12 19.5l-6.894-6.894.01-.01z">
+                                    </path>
+                                  </svg>
                                 </div>
                               </div>
                               <div class="text-white">.</div>
@@ -1113,12 +1178,11 @@
   </div>
 
 
-
   <!-- swiper slider links -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/app.js" type="module"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  
+
 
 </body>
 

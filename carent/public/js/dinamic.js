@@ -82,7 +82,7 @@ export default class dinamic {
                 </div>
                 <div class='mt-[6px]'>
                   <button
-                    class="w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
+                    data-priec='${items.id}' data-quantity='${items.quantity}'  class="btnItems w-[98px] h-[34px] text-white bg-[#3563E9] text-[14px] rounded-[4px] hover:cursor-pointer">
                     Rental Now
                   </button>
                 </div>
@@ -107,6 +107,7 @@ export default class dinamic {
       aryy = yes.data;
       this.dataCar();
       Stroge.setdata(aryy);
+      Stroge.setDataPriec(aryy);
     })
     .catch((eror) => {
       console.log(eror);

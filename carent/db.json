@@ -7,7 +7,8 @@
       "priec": "$22.56",
       "Discount": "$20.00",
       "People": "5 People",
-      "bock": "20L"
+      "bock": "20L",
+      "quantity" : 1
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "priec": "$45.16",
       "Discount": "",
       "People": "8 People",
-      "bock": "10L"
+      "bock": "10L",
+      "quantity" : 1
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "priec": "$76.34",
       "Discount": "",
       "People": "3 People",
-      "bock": "70L"
+      "bock": "70L",
+      "quantity" : 1
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "priec": "$12.26",
       "Discount": "$10.00",
       "People": "6 People",
-      "bock": "20L"
+      "bock": "20L",
+      "quantity" : 1
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "priec": "$87.99",
       "Discount": "$45.00",
       "People": "5 People",
-      "bock": "50L"
+      "bock": "50L",
+      "quantity" : 1
     },
     {
       "id": 6,
@@ -52,25 +57,28 @@
       "priec": "$41.22",
       "Discount": "",
       "People": "6 People",
-      "bock": "90L"
+      "bock": "90L",
+      "quantity" : 1
     },
     {
-      "id": 8,
+      "id": 7,
       "title": "All New Terios",
       "imgs": "../img/image 8.png",
       "priec": "$42.49",
       "Discount": "$90.00",
       "People": "3 People",
-      "bock": "30L"
+      "bock": "30L",
+      "quantity" : 1
     },
     {
-      "id": 9,
+      "id": 8,
       "title": "Nissan GT - R",
       "imgs": "../img/Car (12).png",
       "priec": "$42.49",
       "Discount": "$40.00",
       "People": "4 People",
-      "bock": "60L"
+      "bock": "60L",
+      "quantity" : 1
     }
   ]
 }
